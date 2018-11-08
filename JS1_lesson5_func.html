@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+
+    <div id="chess">
+    </div>
+    <script>
+        var FIGURA = ['R', 'N', 'B', 'Q', 'K', 'B', 'N', 'R']
+
+        //задаем цвет первой клетки в ряду
+        var firstBlock = "white";
+
+        //создаем ряд клеток, начиная с белой или черной, в зависимости от того с какой начинали предыдущий. Чередование цветов построено на псевдоклассе :nth-child(odd), который меняет цвет у всех нечетных элементов.
+        function getRowChess() {
+            for (let i = 0; i < 8; i++) {
+                let newDiv = document.createElement("div");
+                newDiv.className = firstBlock;
+                chess.appendChild(newDiv);
+            }
+        }
+        //проверяем текущий цвет первой клетки в ряду, вызываем функцию создания ряда и после её вполнения меняем цвет первой клетки, для создания следующего ряда
+        for (let i = 0; i < 8; i++) {
+            if (firstBlock = "white") {
+                getRowChess();
+                firstBlock = "black";
+                
+            } else {
+                getRowChess();
+                firstBlock = "white";
+            }
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#chess {
+    width: 400px;
+    height: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    border: 25px solid #111;
+    background-color: #111;
+    margin: 0 auto;
+}
+
+#chess .white {
+    width: 50px;
+    height: 50px;
+    background-color: #999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    
+}
+
+#chess .black {
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+}
+
+#chess .white:nth-child(odd) {
+    background-color: #fff;
+}
+
+#chess .black:nth-child(odd) {
+    background-color: #999;
+}
